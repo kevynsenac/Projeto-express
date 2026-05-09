@@ -1,14 +1,22 @@
 {
-  "name": "aula04",
+  "name": "classes-copa-do-mundo",
   "version": "1.0.0",
-  "description": "hello world com express",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevynsenac/Projeto-express.git"
+  },
   "keywords": [],
-  "author": "kevynboom",
+  "author": "kevynsenac",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevynsenac/Projeto-express/issues"
+  },
+  "homepage": "https://github.com/kevynsenac/Projeto-express#readme",
   "dependencies": {
     "dotenv": "^17.4.2",
     "express": "^5.2.1"
