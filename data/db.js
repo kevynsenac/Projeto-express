@@ -601,3 +601,5 @@ const jogos = [
     score2: "?",
   },
 ];
+
+module.exports = jogos;

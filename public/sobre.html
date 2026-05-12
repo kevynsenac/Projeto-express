@@ -1,36 +1,123 @@
+<!-- Página gerada com IA -->
+
 <!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sobre - Copa do Mundo 2026</title>
+    <title>Sobre • Copa do Mundo 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
     <style>
       body {
-        font-family: Arial, sans-serif;
-        margin: 40px;
-        background: #f4f4f4;
-        line-height: 1.6;
+        background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
+        color: #e2e8f0;
       }
-      h1 {
-        color: #1877f2;
-      }
-      a {
-        color: #1877f2;
+      .hero-bg {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+          url("https://source.unsplash.com/random/1920x1080/?soccer-stadium")
+            center/cover no-repeat;
       }
     </style>
   </head>
-  <body>
-    <h1>🏆 Sobre o Projeto Copa do Mundo</h1>
-    <p>
-      Este projeto exibe a tabela de jogos da fase de grupos da Copa do Mundo
-      2026.
-    </p>
-    <p>Funcionalidades:</p>
-    <ul>
-      <li>Visualização de todos os jogos por rodada</li>
-      <li>Busca interativa por país ou data</li>
-      <li>Design responsivo com cards</li>
-    </ul>
-    <p><a href="/">← Voltar para a página inicial</a></p>
+  <body class="min-h-screen">
+    <header class="hero-bg py-24 text-center">
+      <div class="max-w-4xl mx-auto px-6">
+        <div
+          class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-2 rounded-full mb-6 border border-white/20"
+        >
+          <span class="text-4xl">🏆</span>
+          <span class="text-xl font-semibold tracking-wider"
+            >Copa do Mundo 2026</span
+          >
+        </div>
+        <h1 class="text-5xl md:text-6xl font-bold mb-4">Sobre o Projeto</h1>
+        <p class="text-xl text-slate-300 max-w-lg mx-auto">
+          Acompanhe a maior competição do mundo com uma experiência moderna e
+          interativa.
+        </p>
+      </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-16">
+      <div class="prose prose-invert max-w-none">
+        <p class="text-lg text-slate-300">
+          Este projeto apresenta a
+          <strong>tabela completa de jogos da fase de grupos</strong>
+          da Copa do Mundo FIFA 2026, com design moderno, navegação fluida e
+          experiência otimizada para dispositivos móveis.
+        </p>
+      </div>
+
+      <div class="mt-16">
+        <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+          <i class="fa-solid fa-fire text-orange-500"></i>
+          Funcionalidades
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div
+            class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 hover:border-emerald-500 transition-all duration-300 group"
+          >
+            <div
+              class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform"
+            >
+              📅
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Todas as Rodadas</h3>
+            <p class="text-slate-400">
+              Visualize os jogos organizados por rodada com detalhes completos.
+            </p>
+          </div>
+
+          <div
+            class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 hover:border-emerald-500 transition-all duration-300 group"
+          >
+            <div
+              class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform"
+            >
+              🔍
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Busca Inteligente</h3>
+            <p class="text-slate-400">
+              Encontre jogos rapidamente por seleção, data ou estádio.
+            </p>
+          </div>
+
+          <div
+            class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 hover:border-emerald-500 transition-all duration-300 group"
+          >
+            <div
+              class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform"
+            >
+              📱
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Totalmente Responsivo</h3>
+            <p class="text-slate-400">
+              Design moderno e cards otimizados para qualquer dispositivo.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 text-center">
+        <a
+          href="/"
+          class="inline-flex items-center gap-3 bg-white text-slate-900 font-semibold px-8 py-4 rounded-2xl hover:bg-emerald-400 hover:text-white transition-all duration-300 text-lg"
+        >
+          <i class="fa-solid fa-arrow-left"></i>
+          Voltar para a página inicial
+        </a>
+      </div>
+    </main>
+
+    <footer class="text-center py-10 text-slate-500 text-sm">
+      <p>Projeto demonstrativo • Copa do Mundo FIFA 2026</p>
+    </footer>
   </body>
 </html>

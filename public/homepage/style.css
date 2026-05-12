@@ -1,21 +1,64 @@
+/* Código gerado com IA pq tô com preguiça */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  --primary: #00c853;
+  --primary-dark: #00a13f;
+  --bg: #0a0f1c;
+  --card-bg: #111827;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --accent: #22d3ee;
+}
+
 body {
-  font-family: Papyrus, sans-serif, Arial;
-  background-color: #ebe4e4;
-  color: #333;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  background-image:
+    linear-gradient(rgba(0, 200, 83, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 200, 83, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
 }
 
 header {
-  background-color: #1877f2;
-  color: #000;
+  background: linear-gradient(135deg, #111827 0%, #1e2937 100%);
+  border-bottom: 4px solid var(--primary);
+  padding: 2rem 1rem;
   text-align: center;
-  padding: 2rem;
-  margin-bottom: 1.25rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 200, 83, 0.15) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
 }
 
 header h1 {
@@ -23,115 +66,167 @@ header h1 {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  text-shadow: 1px 1px 4px #fff;
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 4px 12px rgba(0, 200, 83, 0.4);
+}
+
+header h1 span {
+  color: var(--primary);
 }
 
 .search-container {
   display: flex;
   justify-content: center;
+  margin-top: 1.5rem;
 }
 
 #search-input {
-  width: 80%;
-  max-width: 500px;
-  padding: 1rem 1rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 1rem;
-  color: #333;
-  box-shadow: 0 4px 10px #000;
+  width: 100%;
+  max-width: 520px;
+  padding: 1.1rem 1.5rem 1.1rem 3.5rem;
+  font-size: 1.1rem;
+  background-color: #1e2937;
+  border: 2px solid transparent;
+  border-radius: 9999px;
+  color: white;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.4);
   outline: none;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 
 #search-input::placeholder {
-  color: #999;
-  font-style: italic;
+  color: #64748b;
 }
 
 #search-input:focus {
-  transform: scale(1.02);
-  box-shadow: 0 6px 20px #5e72ca6c;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(0, 200, 83, 0.2);
+  transform: scale(1.03);
 }
 
 #search-input:hover {
-  box-shadow: 0 6px 15px #00000033;
-  cursor: pointer;
+  box-shadow: 0 15px 25px -5px rgb(0 0 0 / 0.5);
 }
 
 #table-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.25rem;
-  padding: 1.25rem;
-  max-width: 1200px;
-  margin: 1rem auto;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .rodada-header {
-  background-color: #1877f2;
-  color: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  margin: 1.5rem 0;
-  font-size: 1.5rem;
+  background: linear-gradient(90deg, #1e2937, #334155);
+  color: white;
+  padding: 1.25rem 2rem;
+  border-radius: 16px;
+  font-size: 1.75rem;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  border-bottom: 4px solid #5e72ca;
+  letter-spacing: 3px;
+  border-bottom: 5px solid var(--primary);
   text-align: center;
-  text-shadow: 2px 2px #000;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3);
   grid-column: 1 / -1;
+  margin: 2rem 0 1rem;
 }
 
 .match-card {
-  background-color: khaki;
-  padding: 1.25rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px #00000033;
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.3),
+    inset 0 2px 0 rgba(255, 255, 255, 0.05);
   text-align: center;
-  border-left: 5px solid #5e72ca;
-  transition: all 0.2s;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.match-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  opacity: 0.8;
 }
 
 .match-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.4);
 }
 
 .match-date {
-  color: #1877f2;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 0.5rem;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  display: inline-block;
 }
 
 .teams-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 1rem;
+  gap: 1rem;
 }
 
 .team-box {
-  width: 40%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.team-box:hover img {
+  transform: scale(1.08);
 }
 
 .team-box img {
-  width: 6rem;
-  border-radius: 4px;
-  box-shadow: 0 4px 4px #00000033;
+  width: 78px;
+  height: 78px;
+  object-fit: contain;
+  border-radius: 12px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.team-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text);
+  text-align: center;
+  line-height: 1.2;
 }
 
 .score-box {
-  font-weight: bold;
-  font-size: 1.2rem;
-  padding: 0.3rem;
-  border-radius: 25px;
-  border: 1px solid #ddd;
-  min-width: 60px;
+  font-size: 1.75rem;
+  font-weight: 900;
+  padding: 0.6rem 1.1rem;
+  background: linear-gradient(135deg, #1e2937, #334155);
+  border-radius: 9999px;
+  border: 3px solid rgba(0, 200, 83, 0.3);
+  color: white;
+  min-width: 78px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  flex-shrink: 0;
 }

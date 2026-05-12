@@ -1,4 +1,5 @@
 const container = document.getElementById("table-container");
+let = jogosBase = [];
 
 function carregarJogos(jogosFiltrados = "") {
   if (!container) return;
@@ -76,7 +77,7 @@ function configurarBusca() {
   inputBusca.addEventListener("input", () => {
     const textoFiltrado = removerAcentos(inputBusca.value.toLowerCase());
 
-    const jogosFiltrados = jogos.filter((jogo) => {
+    const jogosFiltrados = jogosBase.filter((jogo) => {
       const time1SemAcento = removerAcentos(jogo.time1.toLowerCase());
       const time2SemAcento = removerAcentos(jogo.time2.toLowerCase());
 
@@ -97,7 +98,15 @@ function configurarBusca() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  carregarJogos(jogos);
-  configurarBusca();
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const resposta = await fetch("/api/jogos");
+    const jogos = await resposta.json();
+    carregarJogos(jogos);
+    configurarBusca();
+    jogosBase = jogos;
+  } catch (err) {
+    console.log("Erro ao carregar os dados da copa", err);
+    container.innerHTML = `<p style="color: red;">Erro ao carregar os dados da copa. Por favor, tente mais tarde.</p>`;
+  }
 });
